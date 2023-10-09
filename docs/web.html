@@ -1,0 +1,82 @@
+<html class="no-js" lang="es-DO">
+<head>
+	<meta charset="utf-8">
+	<meta name="google" content="notranslate" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Proyecto escuelaRD	</title>
+	<meta name="description" content="Proyecto escuelaRD - Herramienta de manejo y publicaci&oacute;n de calificaciones escolares seg&uacute;n el modelo de la Rep&uacute;blica Dominicana">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true">
+		
+	<link rel="apple-touch-icon" href="https://imagenes.escuelard.com/favicon.png">
+	<link rel="shortcut icon" href="https://imagenes.escuelard.com/favicon.png">
+	
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.escuelard.com/assets/js/qrcode.js"></script>
+	<script src="https://cdn.escuelard.com/assets/js/camaraqr.js"></script>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175123945-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-175123945-1');
+	</script>
+
+<style>
+		#qr-canvas {
+			display: none;
+		}
+
+		#videoqr, #v {
+			width: 100%;
+			height: auto;
+		}
+
+		.selector {
+			display: none;
+			width: 0px;
+			height: 0px;
+		}
+
+		#outdiv {
+			width: 100%;
+			height: auto;
+			border: none;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		#result {
+			display: none;
+			border: none;
+			padding: 0px;
+			width: 0px;
+			height: 0px;
+		}
+</style>
+</head>
+
+<body style="margin:0px;padding:0px">
+	
+	<div id="mainbody" style="margin:0px;padding:0px">
+		<span class="selector" id="webcamimg"></span>
+		<span class="selector" id="qrimg"></span>
+		<div id="outdiv"></div>
+		<div id="result"></div>
+	</div>
+	<canvas id="qr-canvas" width="1" height="1"></canvas>
+	<script>
+		window.addEventListener('message', event => {
+    	if(event.origin.startsWith('https://escuelard.com')){
+        load(new URLSearchParams(document.location.search.substring(1)).get("l"), 1);
+    	}
+		});
+		
+</script>
+</body>
+</html>

@@ -1,89 +1,225 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html class="no-js" lang="es-DO">
+<head>
+	<meta charset="utf-8">
+	<meta name="google" content="notranslate" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Proyecto escuelaRD	</title>
+	<meta name="description" content="Proyecto escuelaRD - Herramienta de manejo y publicaci&oacute;n de calificaciones escolares seg&uacute;n el modelo de la Rep&uacute;blica Dominicana">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+		
+	<link rel="apple-touch-icon" href="https://imagenes.escuelard.com/favicon.png">
+	<link rel="shortcut icon" href="https://imagenes.escuelard.com/favicon.png">
+				
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+	
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.4.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.4.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+	<link rel="stylesheet" href="https://cdn.escuelard.com/assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175123945-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-175123945-1');
+		</script>
+</head>
+<body>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+ <div class="content">
+            
+            <div class="animated fadeIn">
+                	
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
+                <div class="card border">
+                    	<div class="card-body ">
+                    		<div class="row">
+                    			
+                    			<div class="col-xl-9 col-lg-8 col-md-8 col-sm-8 col-12">
+                    		<h2 class="display-4 font-weight-bold">&iexcl;escuelaRD Web! </h2>
+                    		<div class="d-block d-sm-none d-md-none text-center p-0">
+                    				
+                    				<div>
+                    				<img class="card codigoqr border border-info" src="https://imagenes.escuelard.com/mp12.jpg" />
+                    				<div style="display:none;cursor:pointer;" class="rcqr text-center ml-4"><div class="rounded-circle bg-info text-white" style="width: 15rem;height:15rem;justify-content: center;align-items: center;text-align: center;padding: 70px 10px 0px 10px;font-weight: bold;"><i class="fa fa-refresh fa-2x"></i><br />Click para recargar el c&oacute;digo QR</div></div>
+                    				</div>
+                    				
+                    				</div>
+                    				
+                    		  <div class="row mt-3">
+                    
+                    
+                    
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block d-md-block">
+                        <div class="card border border-primary">
+                            <div class="card-body">
+                                
+                                  
+                                    <div class="stat-content">
+                                        
+                                            <input value="6" type="hidden" id="cdqr" /><input value="" type="hidden" id="codeqr" /><div class="stat-text"><img src="https://imagenes.escuelard.com/logo2.svg"></div>
+                                        
+                                    </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+			
+                    <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 col-12">
+
+                   <div class="anigasig">
+                        <div class="card border border-success">
+                            <div class="card-body">
+                                <div class="stat-widget-one">
+                                    <div class="stat-icon dib"><i style="font-size: 4rem" class="px-4 py-3 fa fa-qrcode text-success border-info"></i></div>
+                                    <div class="stat-content dib">
+                                        <div class="stat-text"><a href="#n">Apunte la c&aacute;mara desde el disposito con sesi&oacute;n iniciada</a></div>
+                                        <div class="stat-digit d-none d-sm-block d-md-block">Escanee el c&oacute;digo QR de la derecha</div>
+                                        <div class="stat-digit d-block d-sm-none d-md-none">Escanee el c&oacute;digo QR de m&aacute;s arriba</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+
+                    <div class="anipcal">
+                        <div class="card border border-danger">
+                            <div class="card-body">
+                                <div class="stat-widget-one">
+                                    <div class="stat-icon dib"><i class="fa fa-google px-3 text-danger border-info"></i></div>
+                                    <div class="stat-content dib">
+                                        <div class="stat-text"><a href="#n" class="descripcionicon" des="pcalificaciones">Sesi&oacute;n con Google</a></div>
+                                        <div class="stat-digit">Es posible necesite seleccionar su correo</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+							
+
+ </div>
+ 			
+ </div> 
+                    		
+                    		</div>
+                    		
+                    		
+                    		
+                    			<div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 d-none d-sm-block d-md-block text-center p-0">
+                    				<div>
+                    				<img class="card codigoqr border border-info" src="https://imagenes.escuelard.com/mp12.jpg" />
+                    				<div style="display:none;cursor:pointer;" class="rcqr text-center ml-4"><div class="rounded-circle bg-info text-white" style="width: 15rem;height:15rem;justify-content: center;align-items: center;text-align: center;padding: 70px 10px 0px 10px;font-weight: bold;"><i class="fa fa-refresh fa-2x"></i><br />Click para recargar el c&oacute;digo QR</div></div>
+                    				</div>
+                    				
+                    				</div>
+                    		</div>
+                    		
+                    		</div>
+										</div>
+										
+				<a class="text-right d-block" id="copy" href="https://escuelard.com">&copy; Proyecto escuelaRD</a>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+var device = navigator.userAgent + navigator.vendor;
+$.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
+  $('#codeqr').val(data['ip']);
+});
+
+const firebaseConfig = {
+		apiKey: "AIzaSyA9eJxcrKP8r4YuteGpfvQRTQxdj6ORqFg",
+    authDomain: "web.escuelard.com",
+    databaseURL: "https://web-escuelard-default-rtdb.firebaseio.com",
+    projectId: "web-escuelard",
+    storageBucket: "web-escuelard.appspot.com",
+    messagingSenderId: "948522304281",
+    appId: "1:948522304281:web:4ccbd164a1dac6ddf03b88"
+		};
+
+  	firebase.initializeApp(firebaseConfig);
+
+function SesionCierra(){
+		var n = Number($('#cdqr').val()) - 1;
+		$('#cdqr').val(n);
+		if(n > 0){
+			if(n < 6){
+		$('.rcqr').parent().parent().css({'background-image': ''});
+		$('.rcqr').parent().css({'background-color':''});
+		$('.codigoqr').show();
+		$('.rcqr').hide();		
+		var d = new Date();
+		var h = d.getHours();
+		var m = d.getMinutes();
+		device = device.replaceAll(' ', '');
+		device = window.btoa(unescape(encodeURIComponent(device)));
+		var rama = $('#codeqr').val() + h + m;
+		rama = window.btoa(unescape(encodeURIComponent(rama)));
+		
+		firebase.database().ref('d2VibG9naW5z/' + rama).on('value', function(disps) {
+		
+			disps.forEach(function (disp) {
+			if(device === disp.val()){
+			document.cookie = "sesionwebqr=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+			document.cookie = "sesionqr=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+			document.cookie = 'sesionwebqr=' + disp.key + ';path=/;domain=escuelard.com';
+			var webcamlogin = firebase.database().ref('d2ViY2FtbG9naW5z/' + rama + '/' + disp.key);
+			webcamlogin.set(true);
+			webcamlogin.remove();
+    	window.location = 'https://escuelard.com/sesion.php?op=SesionQR';
+			}
       });
-    </script>
-  </body>
+      
+		});
+		
+		var deviceqr = device + ':' + rama;
+		
+		$('.codigoqr').attr('src', 'https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=' + deviceqr);
+			
+			}
+			
+		setTimeout(function(){
+		SesionCierra();
+		}, 60000);
+		
+		}else{
+	$('.codigoqr').hide();
+	$('.rcqr').show();
+	$('.rcqr').parent().parent().css({'background-image': $('.codigoqr').attr('src')});
+	$('.rcqr').parent().css({'height':'100%','width':'100%','background-color':'rgba(0,0,0,0.4)'});
+		}
+}
+
+		setTimeout(function(){
+			SesionCierra();
+		}, 1000);
+
+$(document).on('click', '.rcqr', function () {
+$('#cdqr').val(6);
+SesionCierra();
+});
+
+});
+	
+	var f = new Date();
+	var a = f.getFullYear();  
+  document.getElementById("copy").innerHTML = '&copy; ' + a + ' Proyecto escuelaRD';
+</script>										
+              
+</body>
 </html>
