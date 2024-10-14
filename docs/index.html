@@ -11,8 +11,8 @@
   <meta property="og:title" content="Proyecto escuelaRD" />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://imagenes.escuelard.com/logo2.svg" />
-  <meta property="og:url" content="https://escuelard.com"/>
-  <meta property="og:site-name" content="escuelaRD.com"/>
+  <meta property="og:url" content="https://escuelard.edu.do"/>
+  <meta property="og:site-name" content="escuelaRD"/>
   <meta property="og:description" content="Proyecto escuelaRD - Herramienta de manejo y publicaci&oacute;n de calificaciones escolares seg&uacute;n el modelo de la Rep&uacute;blica Dominicana" />
 		
 	<link rel="apple-touch-icon" href="https://imagenes.escuelard.com/favicon.png">
@@ -40,7 +40,6 @@
  <div class="content">
             
             <div class="animated fadeIn">
-                	
 
                 <div class="card border">
                     	<div class="card-body ">
@@ -134,7 +133,7 @@
                     		</div>
 										</div>
 										
-				<a class="text-right d-block" id="copy" href="https://escuelard.com">&copy; Proyecto escuelaRD</a>
+				<a class="text-right d-block" id="copy" href="https://escuelard.edu.do">&copy; Proyecto escuelaRD</a>
 
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
@@ -150,7 +149,7 @@ $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
 
 const firebaseConfig = {
 		apiKey: "AIzaSyA9eJxcrKP8r4YuteGpfvQRTQxdj6ORqFg",
-    authDomain: "web.escuelard.com",
+    authDomain: "web.escuelard.edu.do",
     databaseURL: "https://web-escuelard-default-rtdb.firebaseio.com",
     projectId: "web-escuelard",
     storageBucket: "web-escuelard.appspot.com",
@@ -183,11 +182,11 @@ function SesionCierra(){
 			if(device === disp.val()){
 			document.cookie = "sesionwebqr=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 			document.cookie = "sesionqr=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-			document.cookie = 'sesionwebqr=' + disp.key + ';path=/;domain=escuelard.com';
+			document.cookie = 'sesionwebqr=' + disp.key + ';path=/;domain=escuelard.edu.do';
 			var webcamlogin = firebase.database().ref('d2ViY2FtbG9naW5z/' + rama + '/' + disp.key);
 			webcamlogin.set(true);
 			webcamlogin.remove();
-    	window.location = 'https://escuelard.com/sesion.php?op=SesionQR';
+    	window.location = 'https://escuelard.edu.do/sesion.php?op=SesionQR';
 			}
       });
       
