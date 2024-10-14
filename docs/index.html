@@ -185,7 +185,7 @@ function SesionCierra(){
 			document.cookie = 'sesionwebqr=' + disp.key + ';path=/;domain=escuelard.edu.do';
 			var webcamlogin = firebase.database().ref('d2ViY2FtbG9naW5z/' + rama + '/' + disp.key);
 			webcamlogin.set(true);
-			webcamlogin.remove();
+			//webcamlogin.remove();
     	window.location = 'https://escuelard.edu.do/sesion.php?op=SesionQR';
 			}
       });
